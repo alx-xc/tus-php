@@ -101,7 +101,7 @@ class Client extends AbstractTus
      *
      * @return string|null
      */
-    public function getFilePath() : ?string
+    public function getFilePath()
     {
         return $this->filePath;
     }
@@ -125,7 +125,7 @@ class Client extends AbstractTus
      *
      * @return string|null
      */
-    public function getFileName() : ?string
+    public function getFileName()
     {
         return $this->fileName;
     }
@@ -278,7 +278,7 @@ class Client extends AbstractTus
      *
      * @return string|null
      */
-    public function getUrl() : ?string
+    public function getUrl()
     {
         $this->url = $this->getCache()->get($this->getKey())['location'] ?? null;
 
@@ -379,7 +379,10 @@ class Client extends AbstractTus
         try {
             // Check if this upload exists with HEAD request.
             $offset = $this->sendHeadRequest();
-        } catch (FileException | ClientException $e) {
+        } catch (FileException $e) {
+            // Create a new upload.
+            $this->url = $this->create($this->getKey());
+        } catch (ClientException $e) {
             // Create a new upload.
             $this->url = $this->create($this->getKey());
         } catch (ConnectException $e) {
@@ -404,7 +407,9 @@ class Client extends AbstractTus
     {
         try {
             $offset = $this->sendHeadRequest();
-        } catch (FileException | ClientException $e) {
+        } catch (FileException $e) {
+            return false;
+        } catch (ClientException $e) {
             return false;
         }
 

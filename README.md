@@ -1,24 +1,7 @@
 ﻿<h1 align="center">TusPHP</h1>
 
 <p align="center">
-    <a href="https://packagist.org/packages/ankitpokhrel/tus-php">
-        <img alt="PHP Version" src="https://img.shields.io/badge/php-7.1.3%2B-brightgreen.svg?style=flat-square" />
-    </a>
-    <a href="https://travis-ci.org/ankitpokhrel/tus-php">
-        <img alt="Build Status" src="https://img.shields.io/travis/ankitpokhrel/tus-php/master.svg?style=flat-square" />
-    </a>
-    <a href="https://scrutinizer-ci.com/g/ankitpokhrel/tus-php">
-        <img alt="Code Coverage" src="https://img.shields.io/scrutinizer/coverage/g/ankitpokhrel/tus-php.svg?style=flat-square" />
-    </a>
-    <a href="https://scrutinizer-ci.com/g/ankitpokhrel/tus-php">
-        <img alt="Scrutinizer Code Quality" src="https://img.shields.io/scrutinizer/g/ankitpokhrel/tus-php.svg?style=flat-square" />
-    </a>
-    <a href="https://packagist.org/packages/ankitpokhrel/tus-php">
-        <img alt="Downloads" src="https://img.shields.io/packagist/dm/ankitpokhrel/tus-php.svg?style=flat-square" />
-    </a>
-    <a href="https://github.com/ankitpokhrel/tus-php/blob/master/LICENSE">
-        <img alt="Software License" src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" />
-    </a>
+    PHP 7.0 compatible downgrade of original project
 </p>
 
 <p align="center">
